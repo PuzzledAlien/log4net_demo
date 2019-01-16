@@ -12,7 +12,7 @@ namespace DotNetCoreConsole
         private static ILoggerRepository _loggerRepository;
         static void Main(string[] args)
         {
-            _loggerRepository = LogManager.CreateRepository("ConsoleApp3");
+            _loggerRepository = LogManager.CreateRepository("DotNetCoreConsole");
             XmlConfigurator.ConfigureAndWatch(_loggerRepository, new FileInfo("log4net.config"));
             var log = LogManager.GetLogger(_loggerRepository.Name, typeof(Program));
 
